@@ -1,14 +1,11 @@
 package entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name="tb_game")
+@Table(name = "tb_game")
 
 public class Game {
 
@@ -17,7 +14,10 @@ public class Game {
     private Long id;
 
     private String title;
+
+    @Column(name = "game_year")
     private Integer year;
+
     private String genre;
     private String platforms;
     private Double score;
