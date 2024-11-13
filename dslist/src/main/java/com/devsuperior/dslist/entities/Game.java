@@ -1,4 +1,4 @@
-package entities;
+package com.devsuperior.dslist.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -10,7 +10,7 @@ import lombok.Data;
 public class Game {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
